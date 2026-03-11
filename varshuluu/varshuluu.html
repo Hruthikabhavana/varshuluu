@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>For My Varshuluuu ❤️</title>
+
+<style>
+    body{
+font-family:'Poppins', sans-serif;
+}
+
+h1,h2{
+font-family:'Pacifico', cursive;
+}
+    .memory-wall{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.polaroid{
+background:white;
+padding:10px 10px 25px 10px;
+width:200px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+border-radius:5px;
+text-align:center;
+transition:transform 0.4s;
+cursor:pointer;
+}
+
+.polaroid img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:4px;
+}
+
+.polaroid p{
+margin-top:8px;
+font-size:14px;
+color:#333;
+font-weight:bold;
+}
+
+.polaroid:nth-child(1){ transform:rotate(-6deg); }
+.polaroid:nth-child(2){ transform:rotate(5deg); }
+.polaroid:nth-child(3){ transform:rotate(-4deg); }
+.polaroid:nth-child(4){ transform:rotate(6deg); }
+.polaroid:nth-child(5){ transform:rotate(-5deg); }
+.polaroid:nth-child(6){ transform:rotate(4deg); }
+
+.polaroid:hover{
+transform:rotate(0deg) scale(1.1);
+z-index:10;
+}
+    .confetti{
+position:fixed;
+width:10px;
+height:10px;
+background:red;
+top:-10px;
+animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(0) rotate(0deg);
+}
+
+100%{
+transform:translateY(100vh) rotate(360deg);
+}
+
+}
+    #heartContainer{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.viewerHeart{
+position:absolute;
+color:#ff4d6d;
+font-size:20px;
+animation:heartFloat 4s linear forwards;
+}
+
+@keyframes heartFloat{
+
+0%{
+transform:translateY(50px) scale(0.5);
+opacity:0;
+}
+
+30%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-200px) scale(1.3);
+opacity:0;
+}
+
+}
+    .viewer{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:999;
+}
+
+.viewer img{
+max-width:85%;
+max-height:70%;
+border-radius:10px;
+box-shadow:0 10px 40px rgba(0,0,0,0.8);
+}
+
+#caption{
+color:white;
+font-size:22px;
+margin-top:15px;
+}
+
+.closeBtn{
+position:absolute;
+top:25px;
+right:35px;
+font-size:35px;
+color:white;
+cursor:pointer;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+text-align:center;
+min-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* floating hearts */
+
+.heart{
+position:absolute;
+color:white;
+font-size:20px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+}
+
+.container{
+margin-top:120px;
+padding:20px;
+}
+
+h1{
+font-size:55px;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 25px pink;}
+}
+
+.card{
+
+background:white;
+color:#333;
+padding:25px;
+border-radius:15px;
+width:60%;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+#compliment{
+margin-top:15px;
+font-size:20px;
+color:#ff0066;
+}
+
+#final{
+display:none;
+font-size:22px;
+color:#d6004c;
+margin-top:20px;
+}
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+opacity:0;
+transform:scale(0.9);
+transition:opacity 0.8s ease, transform 0.8s ease;
+}
+
+.gallery img.show{
+opacity:1;
+transform:scale(1);
+}
+
+#memoryMessage{
+margin-top:20px;
+font-size:22px;
+color:#ff0066;
+display:none;
+animation:fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(10px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>For My Varshuluuu 💖</h1>
+
+<div class="card">
+
+<h2 id="typing"></h2>
+
+<p>
+You are someone who stood beside me in every situation. you are with me when i cry,laugh and everything from past days
+This little website is just a small way to say  
+<strong>Thank you for being in my life.</strong>
+</p>
+<h2>Beautiful Moments 📸</h2>
+<h3>This is the reminder that we need to click pics as i realised we dont have atleast one..</h3>
+
+<div class="memory-wall">
+
+<div class="polaroid">
+<img src="/varshuluu/img1.jpeg" onclick="openImage(this)" data-caption="Chinnappudu cutie 😊">
+<p>Chinnappudu cutie</p>
+</div>
+
+<div class="polaroid">
+<img src="/varshuluu/img2.jpeg" onclick="openImage(this)" data-caption="Poselu appude...">
+<p>Poselu appude</p>
+</div>
+
+<div class="polaroid">
+<img src="/varshuluu/img3.jpeg" onclick="openImage(this)" data-caption="Cake nen thechha 🎂">
+<p>Cake nene thechha</p>
+</div>
+
+<div class="polaroid">
+<img src="/varshuluu/img4.jpeg" onclick="openImage(this)" data-caption="Birthday papa 🎉">
+<p>Birthday papa</p>
+</div>
+
+<div class="polaroid">
+<img src="/varshuluu/img5.jpeg" onclick="openImage(this)" data-caption="Buggalatho aduthunna Varshuluu 💖">
+<p>Buggalatho aduthunna varshuluuu</p>
+</div>
+
+<div class="polaroid">
+<img src="/varshuluu/img6.jpeg" onclick="openImage(this)" data-caption="Cheeralo chandamama... naa Varshuluuu 🌙">
+<p>cheeraloo chandamama .....Naa Varshuluuu</p>
+</div>
+
+</div>
+<p id="memoryMessage">
+The best memories are the ones I share with you, Varshuluuu 💖
+</p>
+
+<button onclick="showCompliment()">Tell me something nice ✨</button>
+
+<p id="compliment"></p>
+
+<button onclick="reveal()">Click for Final Surprise 🎁</button>
+
+<p id="final">
+You are truly special Varshuluuu ❤️  
+I'm lucky to have a friend like you.  
+No matter what happens, I hope we always stay this close. 🌸
+</p>
+
+</div>
+
+</div>
+<div class="card">
+
+<h2>One Last Question 💌</h2>
+
+<p>Will you always stay my friend, babesss?</p>
+
+<button onclick="celebrate()">Yes 💖</button>
+<button onclick="celebrate()">Of course Yes 😄</button>
+
+<p id="friendMessage"></p>
+
+</div>
+
+<script>
+    function celebrate(){
+
+document.getElementById("friendMessage").innerText =
+"I knew it 😄 You are the best friend anyone could ask for, Varshuluuu ❤️" ;
+
+for(let i=0;i<120;i++){
+
+let confetti=document.createElement("div");
+confetti.className="confetti";
+
+confetti.style.left=Math.random()*100+"vw";
+confetti.style.backgroundColor=
+["#ff4d6d","#ffd166","#06d6a0","#118ab2","#ef476f"][Math.floor(Math.random()*5)];
+
+confetti.style.animationDuration=(2+Math.random()*2)+"s";
+
+document.body.appendChild(confetti);
+
+setTimeout(()=>{
+confetti.remove();
+},3000);
+
+}
+
+}
+    const galleryImages = document.querySelectorAll(".gallery img");
+
+galleryImages.forEach((img,index)=>{
+    setTimeout(()=>{
+        img.classList.add("show");
+
+        if(index === galleryImages.length-1){
+            setTimeout(()=>{
+                document.getElementById("memoryMessage").style.display="block";
+            },800);
+        }
+
+    }, index*800); // delay between each photo
+});
+    function openImage(img){
+
+const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+const caption = document.getElementById("caption");
+
+viewer.style.display = "flex";
+viewerImg.src = img.src;
+caption.innerText = img.dataset.caption;
+
+startHearts();
+
+}
+
+function closeImage(){
+
+document.getElementById("imageViewer").style.display="none";
+document.getElementById("heartContainer").innerHTML="";
+
+}
+
+function startHearts(){
+
+const container=document.getElementById("heartContainer");
+
+for(let i=0;i<20;i++){
+
+let heart=document.createElement("div");
+heart.className="viewerHeart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"%";
+heart.style.bottom="0px";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+container.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},4000);
+
+}
+
+}
+    function openImage(img){
+
+const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+const caption = document.getElementById("caption");
+
+viewer.style.display = "flex";
+viewerImg.src = img.src;
+caption.innerText = img.dataset.caption;
+
+}
+
+function closeImage(){
+
+document.getElementById("imageViewer").style.display = "none";
+
+}
+
+/* typing animation */
+
+let text="Dear Varshuluuu...";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,100);
+}
+}
+
+type();
+
+/* compliments */
+
+const compliments=[
+"You make every day brighter ☀️",
+"You are the kindest person I know 💖",
+"You always support me no matter what 🤝",
+"You are truly one of a kind ✨",
+"The world is better with you in it 🌸"
+];
+
+function showCompliment(){
+
+let random=Math.floor(Math.random()*compliments.length);
+
+document.getElementById("compliment").innerText=compliments[random];
+
+}
+
+/* final message */
+
+function reveal(){
+document.getElementById("final").style.display="block";
+}
+
+/* floating hearts generator */
+
+function createHeart(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+<div id="imageViewer" class="viewer" onclick="closeImage()">
+
+<span class="closeBtn">✖</span>
+
+<img id="viewerImg">
+
+<p id="caption"></p>
+
+<div id="heartContainer"></div>
+
+</div>
+
+</body>
+</html>
